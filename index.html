@@ -2,10 +2,11 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- ESCALADO AUTOMATICO -->
     <title>Mistacao | Cacao Premium de Origen</title>
+    <link rel="icon" href="Cacao.png"> <!-- icono de la pagina -->
     <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com"></script> <!-- citar tailwindcss -->
     <script>
         tailwind.config = {
             theme: {
@@ -124,7 +125,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
+    <style> /* estilos dentro de la pagina  */
         /* Modern Hero Gradient */
         .hero-gradient {
             background: linear-gradient(135deg, 
@@ -219,9 +220,9 @@
         }
         
         .product-card:hover {
-            transform: translateY(-15px) scale(1.02);
-            box-shadow: 0 25px 50px -12px rgba(244, 162, 97, 0.25);
-            border-color: rgba(244, 162, 97, 0.3);
+            transform: translateY(-10px) scale(1.01);
+            box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.2);
+            border-color: rgba(244, 162, 97, 0.25);
         }
 
         /* Enhanced Scroll Animations */
@@ -335,7 +336,12 @@
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             transform-style: preserve-3d;
         }
-        
+        h3{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            letter-spacing: -0.02 rem;
+            line-height: 1.4;
+            color: #e8924f;
+        }
         .hover-3d:hover {
             transform: perspective(1000px) rotateX(8deg) rotateY(8deg) scale(1.05);
             box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
@@ -410,6 +416,9 @@
                 transform: translateY(-5px);
             }
         }
+        .tit{
+            color: #e8924f;
+        }
 
         /* Custom Scrollbar */
         ::-webkit-scrollbar {
@@ -440,9 +449,13 @@
         }
         .hero-image {
             border-radius: 20px;
+            filter: blur(0.5px);
             overflow: hidden;
+            transform: filter 0.5s ease;
         }
-        
+        .hero-image:hover {
+            filter: blur(0px);
+        }
         @keyframes loadingDots {
             0%, 20% { content: ''; }
             40% { content: '.'; }
@@ -450,7 +463,7 @@
             80%, 100% { content: '...'; }
         }
     </style>
-</head>
+</head> <!-- realizamos el preloader -->
 <body class="bg-light font-sans text-dark antialiased overflow-x-hidden">
     <!-- Preloader -->
     <div id="preloader" class="fixed inset-0 bg-primary z-50 flex items-center justify-center">
@@ -460,17 +473,15 @@
         </div>
     </div>
 
-    <!-- Particle Background -->
-    <div id="particles-js" class="fixed inset-0 z-0"></div>
 
     <!-- Header -->
     <header class="fixed w-full z-40 transition-all duration-500" id="header">
         <div class="container mx-auto px-6 py-4">
             <nav class="flex justify-between items-center">
                 <!-- Logo -->
-                <a href="#inicio" class="text-2xl font-bold flex items-center hover-3d group">
-                    <img src="mistacao logo actualizado.png" width="200" height="200" alt="Mistacao" class="h-12 group-hover:animate-pulse">
-                    <span class="ml-3 text-white font-display text-xl hidden sm:block">Mistacao</span>
+                <a href="#inicio" class="text-2xl font-bold flex items-center ">
+                    <img src="misticao ultimate.png" width="200" height="200" alt="Mistacao" class="">
+                    <span class="ml-3 text-white font-display text-xl hidden sm:block"></span>
                 </a>
                 
                 <!-- Desktop Navigation -->
@@ -634,7 +645,7 @@
     <section class="py-16 bg-white">
         <div class="container mx-auto px-6">
             <div class="text-center mb-12 scroll-hidden">
-                <h2 class="text-3xl font-serif font-bold mb-4 text-dark">Confía en nosotros</h2>
+                <h2 class="text-3xl font-sans serif font-bold mb-4 text-dark">Confía en nosotros</h2>
                 <p class="max-w-2xl mx-auto text-gray-600">El nombre Misticao nace de la combinación de dos elementos que representan la esencia de nuestro chocolate:
 "Misti", que evoca nuestras raíces peruanas y andinas.
 "Cao", derivado de cacao, el corazón de nuestro producto.</p>
@@ -657,7 +668,7 @@
                 <div class="lg:w-1/2 scroll-hidden">
                     <div class="relative gradient-border">
                         <img src="1 mistacao.jpeg" alt="Sobre Mistacao" class="rounded-xl w-full">
-                        <div class="absolute -bottom-6 -right-6 bg-accent text-white p-6 rounded-xl shadow-lg hidden md:block hover-3d">
+                        <div class="absolute -bottom-6 -right-6 bg-[#352208] text-white p-6 rounded-xl shadow-lg hidden md:block hover-3d">
                             <span class="text-2xl font-bold block">Cacao</span>
                             <span class="text-sm">Peruano</span>
                         </div>
@@ -666,7 +677,7 @@
                 
                 <div class="lg:w-1/2 scroll-hidden">
                     <span class="text-accent font-semibold tracking-wider">SOBRE NOSOTROS</span>
-                    <h2 class="text-3xl md:text-4xl font-serif font-bold mt-2 mb-6 text-dark">Pasión por el cacao</h2>
+                    <h2 class="text-3xl md:text-4xl font-sans serif font-bold mt-2 mb-6 text-dark">Pasión por el cacao</h2>
                     <p class="text-gray-600 mb-6">
                         Misión:
 Ofrecer chocolates de alta calidad elaborados con cacao proveniente de la selva peruana, que promuevan el desarrollo de pequeños productores locales, manteniendo un precio accesible para nuestros consumidores.
@@ -705,7 +716,7 @@ Ser una marca reconocida en todo el Perú por ofrecer chocolates elaborados con 
         <div class="container mx-auto px-6">
             <div class="text-center mb-16 scroll-hidden">
                 <span class="text-accent font-semibold tracking-wider">NUESTRO PROCESO</span>
-                <h2 class="text-3xl md:text-4xl font-serif font-bold mt-2 mb-4 text-dark">Del árbol a tu paladar</h2>
+                <h2 class="text-3xl md:text-4xl font-sans serif font-bold mt-2 mb-4 text-dark">Del árbol a tu paladar</h2>
                 <p class="max-w-2xl mx-auto text-gray-600">Cada paso de nuestro proceso está diseñado para preservar la calidad y el sabor auténtico del cacao.</p>
             </div>
             
@@ -730,7 +741,7 @@ Ser una marca reconocida en todo el Perú por ofrecer chocolates elaborados con 
                         </div>
                         
                         <div class="lg:w-5/12">
-                            <h3 class="text-2xl font-serif font-bold mb-3 text-dark">Cultivo y Cosecha</h3>
+                            <h3 class="text-2xl font-sans serif font-bold mb-3 text-dark">Cultivo y Cosecha</h3>
                             <p class="text-gray-600 mb-4">
                                 Nuestro cacao crece bajo sombra natural en armonía con el ecosistema. La cosecha se realiza manualmente seleccionando solo los frutos en su punto óptimo de maduración.
                             </p>
@@ -766,7 +777,7 @@ Ser una marca reconocida en todo el Perú por ofrecer chocolates elaborados con 
                         </div>
                         
                         <div class="lg:w-5/12">
-                            <h3 class="text-2xl font-serif font-bold mb-3 text-dark">Fermentación</h3>
+                            <h3 class="text-2xl font-sans serif font-bold mb-3 text-dark">Fermentación</h3>
                             <p class="text-gray-600 mb-4">
                                 Los granos se fermentan en cajas de madera durante 5-7 días, desarrollando sus complejos aromas y sabores característicos.
                             </p>
@@ -802,7 +813,7 @@ Ser una marca reconocida en todo el Perú por ofrecer chocolates elaborados con 
                         </div>
                         
                         <div class="lg:w-5/12">
-                            <h3 class="text-2xl font-serif font-bold mb-3 text-dark">Secado</h3>
+                            <h3 class="text-2xl font-sans serif font-bold mb-3 text-dark">Secado</h3>
                             <p class="text-gray-600 mb-4">
                                 El secado se realiza al sol sobre camas elevadas, preservando las cualidades nutricionales y reduciendo gradualmente la humedad.
                             </p>
@@ -838,7 +849,7 @@ Ser una marca reconocida en todo el Perú por ofrecer chocolates elaborados con 
                         </div>
                         
                         <div class="lg:w-5/12">
-                            <h3 class="text-2xl font-serif font-bold mb-3 text-dark">Elaboración</h3>
+                            <h3 class="text-2xl font-sans serif font-bold mb-3 text-dark">Elaboración</h3>
                             <p class="text-gray-600 mb-4">
                                 Nuestros maestros chocolateros transforman los granos en productos premium, conservando todo el sabor y propiedades del cacao.
                             </p>
@@ -904,7 +915,7 @@ Ser una marca reconocida en todo el Perú por ofrecer chocolates elaborados con 
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 scroll-hidden">
                 <!-- Product 1 - Chocolate Misticao -->
-                <div class="product-card bg-white rounded-2xl overflow-hidden shadow-lg group hover-3d" data-category="chocolate">
+                <div class="product-card bg-white rounded-2xl overflow-hidden shadow-lg group" data-category="chocolate">
                     <div class="relative overflow-hidden h-72">
                         <img src="gemini_generated_image_e09xw5e09xw5e09x (1).png" alt="Chocolate Misticao" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
                         <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-60 transition duration-300"></div>
@@ -981,7 +992,7 @@ Ser una marca reconocida en todo el Perú por ofrecer chocolates elaborados con 
                 </div>
                 
                 <!-- Product 2 - Cacao en Polvo -->
-                <div class="product-card bg-white rounded-2xl overflow-hidden shadow-lg group hover-3d" data-category="cacao">
+                <div class="product-card bg-white rounded-2xl overflow-hidden shadow-lg group" data-category="cacao">
                     <div class="relative overflow-hidden h-72">
                         <img src="cacao.jpg" alt="Cacao en Polvo" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
                         <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-60 transition duration-300"></div>
@@ -1057,7 +1068,7 @@ Ser una marca reconocida en todo el Perú por ofrecer chocolates elaborados con 
                 </div>
                 
                 <!-- Product 3 - Nibs de Cacao -->
-                <div class="product-card bg-white rounded-2xl overflow-hidden shadow-lg group hover-3d" data-category="especiales">
+                <div class="product-card bg-white rounded-2xl overflow-hidden shadow-lg group" data-category="especiales">
                     <div class="relative overflow-hidden h-72">
                         <img src="secado de cacao.jpg" alt="Nibs de Cacao" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
                         <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-60 transition duration-300"></div>
@@ -1146,7 +1157,7 @@ Ser una marca reconocida en todo el Perú por ofrecer chocolates elaborados con 
 
     <!-- Stats Section -->
     <section class="py-16 bg-accent text-white parallax" style="background-image: url('Cacao.jpg');">
-        <div class="bg-black bg-opacity-60 py-16">
+        <div class="bg-black bg-opacity-55 py-16">
             <div class="container mx-auto px-6">
                 <div class="grid md:grid-cols-4 gap-8 text-center scroll-hidden">
                     <div class="p-6 hover-3d">
@@ -1423,8 +1434,6 @@ Ser una marca reconocida en todo el Perú por ofrecer chocolates elaborados con 
         <i class="fas fa-arrow-up"></i>
     </a>
 
-    <!-- Particles.js -->
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script>
         // Enhanced Preloader
         window.addEventListener('load', function() {
@@ -1780,43 +1789,6 @@ Ser una marca reconocida en todo el Perú por ofrecer chocolates elaborados con 
             });
         });
 
-        // Initialize particles.js
-        if (typeof particlesJS !== 'undefined') {
-            particlesJS('particles-js', {
-                particles: {
-                    number: { value: 50 },
-                    color: { value: '#f4a261' },
-                    shape: { type: 'circle' },
-                    opacity: { value: 0.5 },
-                    size: { value: 3 },
-                    line_linked: {
-                        enable: true,
-                        distance: 150,
-                        color: '#f4a261',
-                        opacity: 0.2,
-                        width: 1
-                    },
-                    move: {
-                        enable: true,
-                        speed: 2,
-                        direction: 'none',
-                        random: false,
-                        straight: false,
-                        out_mode: 'out',
-                        bounce: false
-                    }
-                },
-                interactivity: {
-                    detect_on: 'canvas',
-                    events: {
-                        onhover: { enable: true, mode: 'repulse' },
-                        onclick: { enable: true, mode: 'push' },
-                        resize: true
-                    }
-                },
-                retina_detect: true
-            });
-        }
     </script>
 </body>
 </html>
